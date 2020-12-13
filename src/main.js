@@ -7,7 +7,10 @@ import App from './App.vue';
 import ElementUI from '@/assests/js/element-config';
 import routeConfig from '@/assests/js/vue-route-config'
 import VueRouter from 'vue-router'
+import Axios from "axios"
 
+Vue.prototype.$axios = Axios
+Axios.defaults.baseURL='http://localhost:10000/'
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 

@@ -3,6 +3,9 @@ var webpack = require('webpack');
 var VueLoaderPlugin = require("vue-loader/lib/plugin.js");
 
 module.exports = {
+    devServer: {
+        proxy: { 'api': 'http://localhost:10000' }
+    },
     entry: "./src/main.js",
     output: {
         path: path.join(__dirname, 'dist'),

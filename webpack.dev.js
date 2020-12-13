@@ -10,7 +10,7 @@ const devConfig = {
     devServer: {
         // contentBase: path.join(__dirname, "dist"), // dist目录开启服务器
         // compress: true, // 是否使用gzip压缩
-        port: 9000, // 端口号
+        port: 9090, // 端口号
         open: true, // 自动打开网页
         hot: true // 开启热更新
     },
