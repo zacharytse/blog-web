@@ -32,6 +32,9 @@ export default {
     blogLogo,
     mainMenu,
   },
+  mounted() {
+    this.$router.push("/home")
+  }
 };
 </script>
 

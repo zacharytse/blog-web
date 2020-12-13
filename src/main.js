@@ -16,7 +16,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
     routes: routeConfig,
-    mode: 'history'
+   // mode: 'history'
 });
 
 const originalPush = VueRouter.prototype.push;

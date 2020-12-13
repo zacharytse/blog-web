@@ -50,8 +50,7 @@ export default {
       index = parseInt(index)
       switch (index) {
         case 1:
-          this.$router.replace("/")
-          window.location.reload()
+          this.$router.push("/home")
           break;
         case 2:
           this.$router.push("/category");
