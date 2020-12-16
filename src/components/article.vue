@@ -1,31 +1,34 @@
 <template>
   <div class="article">
-    <h1 class="title">{{ article_title }}</h1>
+    <h1 class="title">{{ title }}</h1>
     <h5 class="flag">
-      Posted on {{ article_time }} | In java | visitors 75 | 本文阅读量80次
+      Posted on {{ time }} | In java | visitors 75 | 本文阅读量80次
     </h5>
-    <div class="content" v-html="article_content"></div>
+    <div class="content" v-html="content"></div>
   </div>
 </template>
 <script>
+import ShowDown from "showdown";
+let converter = new ShowDown.Converter();
 export default {
-  props: ["title", "time", "content"],
+  props: ["article_title", "article_time", "article_content"],
   data() {
     return {
-      article_title: this.title,
-      article_time: this.time,
-      article_content: this.content,
+      title: "",
+      time: "",
+      content: "",
     };
   },
   watch: {
     article_title(newVal) {
-      this.$emit("update", newVal);
+      this.title = newVal;
     },
     article_time(newVal) {
-      this.$emit("update", newVal);
+      this.time = newVal;
     },
     article_content(newVal) {
-      this.$emit("update", newVal);
+      let html = converter.makeHtml(newVal);
+      this.content = html;
     },
   },
 };

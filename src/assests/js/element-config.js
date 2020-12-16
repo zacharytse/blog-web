@@ -4,7 +4,9 @@ import {
     Menu,
     MenuItemGroup,
     MenuItem,
-    Button
+    Button,
+    Link,
+    Pagination,
 } from 'element-ui'
 
 
@@ -16,5 +18,7 @@ export default {
         V.use(MenuItemGroup)
         V.use(MenuItem)
         V.use(Button)
+        V.use(Link)
+        V.use(Pagination)
     }
 }

@@ -8,7 +8,9 @@
 
     </div>
   </div> -->
-  <Article :title="title" :time="time" :content="content"></Article>
+  
+  <Article :article_title="title" :article_time="time" :article_content="content">
+  </Article>
 </template>
 
 <script>
@@ -25,20 +27,30 @@ export default {
   components: {
       Article,
   },
+  methods: {
+    setData(data) {
+      if(data == null) {
+        this.title = '404'
+        return;
+      }
+      this.title = data.title;
+      this.time = data.time;
+      this.content = data.article
+    }
+  },
   mounted() {
-    let _this = this;
     this.$axios
       .get("/BLOG-SERVER/articles/newest")
-      .then(function (response) {
-          let article_data = response.data.data;
+      .then(response=>(
+          /* let article_data = response.data.data,
           if(article_data == null) {
               _this.title = '404'
               return
-          }
-          _this.title = article_data.title
-          _this.time = article_data.time
-          _this.content = article_data.article
-      })
+          } */
+          /* this.title = response.data.data.title,
+          this.time = response.data.data.time,
+          this.content = response.data.data.article */
+          this.setData(response.data.data))) 
       .catch(function (error) {
         console.log(error);
       });

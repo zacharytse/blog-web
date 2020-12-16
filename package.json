@@ -43,6 +43,7 @@
     "axios": "^0.21.0",
     "element-ui": "^2.14.1",
     "magic.css": "^1.4.6",
+    "showdown": "^1.9.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.9"
   },

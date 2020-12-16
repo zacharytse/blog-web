@@ -51,8 +51,10 @@ module.exports = {
         new VueLoaderPlugin()
     ],
     resolve: {
+        extensions:['.js','.vue','.json'],
         alias: {
-            "@": path.join(__dirname, 'src')
+            "@": path.join(__dirname, 'src'),
+            'jquery':path.resolve(__dirname,'node_modules/jquery/src/jquery')
         }
     },
 }
