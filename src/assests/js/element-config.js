@@ -7,6 +7,8 @@ import {
     Button,
     Link,
     Pagination,
+    Timeline,
+    TimelineItem
 } from 'element-ui'
 
 
@@ -20,5 +22,7 @@ export default {
         V.use(Button)
         V.use(Link)
         V.use(Pagination)
+        V.use(Timeline)
+        V.use(TimelineItem)
     }
 }

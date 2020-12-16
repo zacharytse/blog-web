@@ -44,6 +44,17 @@ module.exports = {
             {
                 test: /\.vue$/,
                 use: ['vue-loader']
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                ],
             }
         ]
     },
@@ -51,10 +62,10 @@ module.exports = {
         new VueLoaderPlugin()
     ],
     resolve: {
-        extensions:['.js','.vue','.json'],
+        extensions: ['.js', '.vue', '.json'],
         alias: {
             "@": path.join(__dirname, 'src'),
-            'jquery':path.resolve(__dirname,'node_modules/jquery/src/jquery')
+            'jquery': path.resolve(__dirname, 'node_modules/jquery/src/jquery')
         }
     },
 }
