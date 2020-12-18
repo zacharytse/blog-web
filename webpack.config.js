@@ -31,7 +31,7 @@ module.exports = {
                 test: /\.js$/,
                 loader: "babel-loader",
                 // exclude参数: node_modules目录下的js文件不需要做转es5语法,也就是排除一些目录
-                exclude: /node_modules/
+                exclude: /node_modules/,
             },
             {
                 test: /\.scss$/,

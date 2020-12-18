@@ -1,23 +1,21 @@
 {
     "presets": [
-        "env",
-        "stage-0",
-        [
-            "es2015",
+        "@babel/env",
+        //"@babel/preset-stage-0",
+        /* [
+            "@babel/preset-env",
             {
                 "modules": false
             }
-        ]
+        ], */
     ],
     "plugins": [
         [
             "component",
-            [
-                {
-                    "libraryName": "element-ui",
-                    "styleLibraryName": "theme-chalk"
-                }
-            ]
+            {
+                "libraryName": "element-ui",
+                "styleLibraryName": "theme-chalk"
+            },
         ]
     ]
 }

@@ -19,6 +19,10 @@ export default {
       content: "",
     };
   },
+  mounted() {
+    const selector = document.querySelector('.article');
+    selector.classList.add("magictime", null, "slideUpReturn");
+  },
   watch: {
     article_title(newVal) {
       this.title = newVal;

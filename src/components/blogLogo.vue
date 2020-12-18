@@ -4,11 +4,11 @@
   </div>
 </template>
 <script>
+import {slideUpReturn} from '../assests/js/animation'
 export default {
   methods: {
     show: function (event) {
-      const selector = document.querySelector(".blog-logo-text");
-      selector.classList.add("magictime", null, "slideUpReturn");
+      slideUpReturn('.blog-logo-text')
     },
   },
   mounted() {

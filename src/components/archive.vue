@@ -23,9 +23,10 @@
   </div>
 </template>
 <script>
-import $ from 'jquery'
+//import $ from 'jquery'
 import ArchiveTimeline from "./archive-timeline.vue";
 import Pagination from "./pagination.vue";
+import {slideUpReturn} from '../assests/js/animation'
 
 let all_data = [];
 let page_size = 10;
@@ -50,6 +51,7 @@ export default {
     this.handleData();
     that.total = all_data.length;
     this.changePage(0, Math.min(page_size, this.total));
+    slideUpReturn('.archive')
   },
   components: {
     ArchiveTimeline,

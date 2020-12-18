@@ -6,5 +6,5 @@ export default {
     home: HOME,
     category : CATEGROY,
     tag : TAG,
-    archive : ARCHIVE
+    archive : ARCHIVE,
 }

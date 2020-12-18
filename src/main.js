@@ -8,7 +8,7 @@ import ElementUI from '@/assests/js/element-config';
 import routeConfig from '@/assests/js/vue-route-config'
 import VueRouter from 'vue-router'
 import Axios from "axios"
-
+import "babel-polyfill"
 Vue.prototype.$axios = Axios
 Axios.defaults.baseURL='http://localhost:10000/'
 Vue.use(ElementUI)

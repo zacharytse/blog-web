@@ -18,6 +18,7 @@
 <script>
 import TagLink from "./category-link.vue";
 import Pagination from './pagination.vue';
+import {slideUpReturn} from '../assests/js/animation'
 
 let tags = [];
 let page_size = 10;
@@ -39,6 +40,7 @@ export default {
     }
     that.total = tags.length;
     this.changePage(0,Math.min(page_size,this.total));
+    slideUpReturn('.category')
     //this.loadPage(1)
   },
   methods: {
